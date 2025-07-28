@@ -8,6 +8,8 @@ import HoliTemplates from './components/Holi/HoliTemplates';
 import RakshaBandhanTemplates from './components/RakshaBandhan/RakshaBandhanTemplates';
 import GaneshPujaTemplates from './components/GaneshPuja/GaneshPujaTemplates';
 import KrishnaTemplates from './components/Krishna/KrishnaTemplates';
+import NavBarComponent from "./components/Navbar/NavBarComponent";
+import CreateGreetings from "./components/CreateGreetings";
 
 // Create a wrapper component to use useNavigate
 const FestivalListWrapper = () => {
@@ -23,6 +25,8 @@ const FestivalListWrapper = () => {
 const App = () => {
   return (
     <Router>
+       <NavBarComponent/>
+       
       <Routes>
         <Route path="/" element={<FestivalListWrapper />} />
         <Route path="/diwali" element={<DiwaliTemplates />} />
@@ -32,6 +36,9 @@ const App = () => {
         <Route path="/rakshabandhan" element={<RakshaBandhanTemplates />} />
          <Route path="/ganeshpuja" element={<GaneshPujaTemplates />} />
          <Route path="/krishna" element={<KrishnaTemplates />} />
+         <Route path="/CreateGreetings" element={<CreateGreetings />} />
+      
+    
       </Routes>
     </Router>
   );
