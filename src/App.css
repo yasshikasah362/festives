@@ -1,3 +1,11 @@
+:root {
+  --op-color-primary: #34644c;
+  --op-color-secondary: #007bff;
+  --op-color-success: #5cb85c;
+  --op-color-danger: #d92550;
+  --op-color-light: #eee;
+  --op-color-ex-light: #fafafa;
+}
 .App {
   text-align: center;
 }

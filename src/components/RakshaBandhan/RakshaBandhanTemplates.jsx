@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom"; 
-import NavBarComponent from "../Navbar/NavBarComponent";
+
 
 
 const templates = [
@@ -42,7 +42,7 @@ const RakshaBandhanTemplates = () => {
   const navigate = useNavigate();
   return (
     <>
-    <NavBarComponent/>
+   
     <Container className="mt-5">
       <h2 className="text-center mb-4">Choose Your RakshaBandhan Template</h2>
       <Row>

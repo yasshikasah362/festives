@@ -95,7 +95,7 @@ const FestivalList = ({ onExplore }) => {
     className="mt-2 px-4 py-2 fw-semibold"
     onClick={() => onExplore(festival)}
   >
-    Explore {festival.name}
+    Explore {festival.name} Templates
   </Button>
 </Carousel.Caption>
 
@@ -111,11 +111,11 @@ const FestivalList = ({ onExplore }) => {
 
       {/* Festival Cards Grid */}
       <div className="text-center mb-5">
-        <h1 className="fw-bold display-5">Celebrate Indian Festivals</h1>
-        <p className="lead text-muted">
+        {/* <h1 className="fw-bold display-5">Celebrate Indian Festivals</h1> */}
+        {/* <p className="lead text-muted">
           Explore beautiful templates for your favorite festivals and create
           personalized messages with ease.
-        </p>
+        </p> */}
       </div>
 
       <div className="row g-4">

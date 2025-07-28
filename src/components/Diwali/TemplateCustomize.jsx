@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import html2canvas from "html2canvas";
-import NavBarComponent from "../Navbar/NavBarComponent";
 
 
 const fonts = ["Arial", "Poppins", "Dancing Script", "Roboto", "Courier New"];
@@ -34,7 +33,7 @@ const TemplateCustomize = () => {
 
   return (
     <>
-    <NavBarComponent />
+    
    
     <Container className="mt-5">
       <h2 className="text-center mb-4">Customize Your Template</h2>

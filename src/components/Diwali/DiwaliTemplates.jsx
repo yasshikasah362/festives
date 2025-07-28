@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import NavBarComponent from "../Navbar/NavBarComponent";
 
 const templates = [
   {
@@ -35,62 +34,60 @@ const templates = [
     name: "Modern Sparkle",
     image: process.env.PUBLIC_URL + "/diwali_teempelate6.jpeg",
   },
+  {
+    id: 7,
+    name: "Modern Look",
+    image: process.env.PUBLIC_URL + "/diwali_teemplate7.jpg",
+  },
+  {
+    id: 8,
+    name: "Modern Greet",
+    image: process.env.PUBLIC_URL + "/diwali_templates8.jpg",
+  },
 ];
 
 const DiwaliTemplates = () => {
   const navigate = useNavigate();
 
   return (
-    <>
-      <NavBarComponent />
-      <Container className="mt-5">
-        <div className="text-center mb-4">
-          <h2 className="fw-bold display-5">Choose Your Diwali Template</h2>
-          <p className="text-muted">Select from beautifully designed templates to customize your Diwali wishes.</p>
-        </div>
+    <Container className="py-5" style={{ backgroundColor: "#f9f6f1", minHeight: "100vh" }}>
+      
 
-        <Row className="g-4">
-          {templates.map((template) => (
-            <Col md={4} sm={6} xs={12} key={template.id}>
-              <motion.div whileHover={{ scale: 1.03 }}>
-                <Card className="h-100 border-0 shadow-lg rounded-4">
-                  <div
-                    style={{
-                      height: "250px",
-                      padding: "10px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      backgroundColor: "#f9f9f9",
-                      borderTopLeftRadius: "1rem",
-                      borderTopRightRadius: "1rem",
-                    }}
-                  >
-                    <Card.Img
-                      src={template.image}
-                      alt={template.name}
-                      style={{ maxHeight: "100%", maxWidth: "100%", objectFit: "contain" }}
-                    />
-                  </div>
-                  <Card.Body className="d-flex flex-column justify-content-between">
-                    <Card.Title className="text-center fw-semibold mb-3">
-                      {template.name}
-                    </Card.Title>
-                    <Button
-                      variant="success"
-                      className="w-100 rounded-pill"
-                      onClick={() => navigate("/customize", { state: { template } })}
-                    >
-                      Select Template
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </motion.div>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </>
+      <Row className="g-4">
+        {templates.map((template) => (
+          <Col key={template.id} lg={3} md={4} sm={6} xs={12}>
+            <motion.div
+              whileHover={{ scale: 1.04 }}
+              transition={{ duration: 0.3 }}
+              className="h-100"
+            >
+              <Card className="shadow-sm border-0 rounded-4 h-100">
+  <Card.Img
+    variant="top"
+    src={template.image}
+    alt={template.name}
+    className="rounded-top-4 bg-white"
+    style={{ height: "200px", objectFit: "contain", padding: "10px" }}
+  />
+  <Card.Body className="d-flex flex-column justify-content-between p-3">
+    <Card.Title className="text-center fw-semibold text-dark fs-6 mb-3">
+      {template.name}
+    </Card.Title>
+    <Button
+      variant="outline-dark"
+      className="rounded-pill btn-sm mt-auto"
+      onClick={() => navigate("/customize", { state: { template } })}
+    >
+      Select Template
+    </Button>
+  </Card.Body>
+</Card>
+
+            </motion.div>
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
 };
 

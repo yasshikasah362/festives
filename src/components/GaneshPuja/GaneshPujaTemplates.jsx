@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import NavBarComponent from "../Navbar/NavBarComponent";
+
 
 // Updated template names for variety
 const templates = [
@@ -43,7 +43,7 @@ const GanpatiTemplates = () => {
 
   return (
     <>
-      <NavBarComponent />
+     
       <Container className="mt-5">
         <div className="text-center mb-4">
           <h2 className="fw-bold display-5">Choose Your Ganpati Template</h2>
