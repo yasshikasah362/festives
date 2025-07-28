@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ArrowLeft } from 'react-bootstrap-icons'; 
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Container, Row, Col, Card, Modal } from "react-bootstrap";
 import { motion } from "framer-motion";
 import upcomingFestivals from "./festivals";
+
+
 
 // Import template components
 import DiwaliTemplates from "../components/Diwali/DiwaliTemplates";
@@ -14,9 +16,21 @@ import GaneshPujaTemplates from "../components/GaneshPuja/GaneshPujaTemplates";
 import RakshaBandhanTemplates from "../components/RakshaBandhan/RakshaBandhanTemplates";
 
 const CreateGreeting = () => {
-  const navigate = useNavigate();
   const [selectedFestival, setSelectedFestival] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const location = useLocation();
+  const [festival, setFestival] = useState(null);
+
+
+  useEffect(() => {
+    // If festival is passed via navigation, store it in state
+    if (location.state?.festival) {
+      setFestival(location.state.festival);
+      setShowModal(true);
+    }
+  }, [location.state]);
+ 
+  
 
   const handleFestivalClick = (festival) => {
     setSelectedFestival(festival);

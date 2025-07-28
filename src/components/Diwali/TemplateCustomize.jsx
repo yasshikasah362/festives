@@ -78,23 +78,29 @@ const TemplateCustomize = () => {
               />
             </Form.Group>
 
-            <Form.Group className="mb-3">
-              <Form.Label>Company Name</Form.Label>
-              <Form.Control
-                type="text"
-                value={company}
-                onChange={(e) => setCompany(e.target.value)}
-              />
-            </Form.Group>
+            <Row className="mb-3">
+  <Col>
+    <Form.Group>
+      <Form.Label>Company Name</Form.Label>
+      <Form.Control
+        type="text"
+        value={company}
+        onChange={(e) => setCompany(e.target.value)}
+      />
+    </Form.Group>
+  </Col>
+  <Col>
+    <Form.Group>
+      <Form.Label>Contact Number</Form.Label>
+      <Form.Control
+        type="text"
+        value={contact}
+        onChange={(e) => setContact(e.target.value)}
+      />
+    </Form.Group>
+  </Col>
+</Row>
 
-            <Form.Group className="mb-3">
-              <Form.Label>Contact Number</Form.Label>
-              <Form.Control
-                type="text"
-                value={contact}
-                onChange={(e) => setContact(e.target.value)}
-              />
-            </Form.Group>
 
             <Form.Group className="mb-3">
               <Form.Label>Text Color</Form.Label>

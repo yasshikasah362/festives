@@ -37,12 +37,28 @@ const upcomingFestivals = [
     route: "/ganeshpuja",
   },
   {
+    id: 8,
+    name: "Independence Day",
+    date: "15 August 2025",
+    image: process.env.PUBLIC_URL + "/independence_day.jpg",
+    route: "/independence",
+  },
+  {
     id: 6,
     name: "Krishna Janmashtami",
     date: "16 August 2025",
     image: process.env.PUBLIC_URL + "/janmaasthami.jpg",
     route: "/krishna",
   },
+  {
+    id: 7,
+    name: "Republic Day",
+    date: "26 January 2025",
+    image: process.env.PUBLIC_URL + "/republic_day.jpg",
+    route: "/republic",
+  },
 ];
 
 export default upcomingFestivals;
+
+
